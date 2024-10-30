@@ -1,0 +1,192 @@
+/* Common */
+body {   
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    font-family: "Nanum Gothic", sans-serif;
+    height: 3000px;
+}
+img {
+    display: block;
+}
+a {
+    text-decoration: none;
+}
+.inner {
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Header */
+header {
+    background-color: #f2f0eb;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    width: 100%;
+}
+header > .inner {
+    height: 120px;
+}
+header .logo {
+    height: 75px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+header .sub-menu {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 0;
+
+}
+header .sub-menu ul.menu {
+    display: flex;
+    font-family: Arial, sans-serif;
+}
+header .sub-menu ul.menu li {
+    position: relative;
+}
+header .sub-menu ul.menu li::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 12px;
+    background-color: #ddd;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+header .sub-menu ul.menu li:first-child::before {
+    display: none;
+}
+header .sub-menu ul.menu li a {
+    color: #555;
+    font-size: 12px;
+    padding: 11px 16px;
+    display: block;
+}
+header .sub-menu ul.menu li a:hover {
+    font-weight: 700;
+    color: #333;
+}
+header .sub-menu .search {
+    height: 34px;
+    position: relative;
+}
+header .sub-menu .search input {
+    width: 36px;
+    height: 34px;
+    padding: 4px 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff;
+    color: #555;
+    font-size: 12px;
+    transition: width 0.4s;
+}
+header .sub-menu .search input:focus {
+    width: 180px;
+    border-color: #c0d48b;
+}
+header .sub-menu .search .material-icons {
+    color: #666;
+    position: absolute;
+    height: 24px;
+    top: 0;
+    bottom: 0;
+    right: 5px;
+    margin: auto;
+}
+header .sub-menu .search.focused .material-icons {
+    opacity: 0;
+}
+
+header .main-menu {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+header .main-menu .item {
+    cursor: pointer;
+}
+header .main-menu .item .item__name {
+    padding: 10px 20px 34px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #333;
+}
+header .main-menu .item:hover .item__name {
+    color: #669900;
+    background-color: #2c2a29;
+    border-radius: 3px 3px 0 0;
+}
+header .main-menu .item .item__contents {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    display: none;
+}
+header .main-menu .item:hover .item__contents {
+    display: block;
+}
+header .main-menu .item .item__contents .contents__menu {
+    background-color: #2c2a29;
+}
+header .main-menu .item .item__contents .contents__menu > ul {
+    display: flex;
+    padding: 20px 0;
+}
+header .main-menu .item .item__contents .contents__menu > ul > li {
+    width: 220px;
+}
+header .main-menu .item .item__contents .contents__menu > ul > li h4 {
+    padding: 0px 0 10px 0;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+}
+header .main-menu .item .item__contents .contents__menu > ul > li ul li {
+    padding: 5px 0;
+    font-size: 12px;
+    color: #999;
+    cursor: pointer;
+}
+header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
+    color: #669900;
+}
+header .main-menu .item .item__contents .contents__texture {
+    padding: 26px 0;
+    background-color: #2c2a29;
+    font-size: 12px;
+    background-image: url(../img/main_menu_pattern.jpg);
+}
+header .main-menu .item .item__contents .contents__texture h4 {
+    color: #999;
+    font-weight: 700;
+}
+header .main-menu .item .item__contents .contents__texture p {
+    color: #669900;
+    margin: 4px 0 14px;
+    font-size: 12px;
+}
+header .badges {
+    position: absolute;
+    top: 132px;
+    right: 12px;
+}
+header .badge {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
