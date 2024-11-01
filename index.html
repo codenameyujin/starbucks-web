@@ -36,7 +36,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 
     <!--Google Material Icons-->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css">
@@ -44,7 +47,17 @@
     <!-- Java Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-     <script defer src="./js/main.js"></script>
+
+    <!-- Swiper -->   
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- ScrollMagic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Youtube Java Script -->
+    <script defer src="./js/youtube.js"></script>
+    <!-- Main Java Script -->
+    <script defer src="./js/main.js"></script>
 </head>
 <body>
     <!-- Header Start -->
@@ -393,15 +406,266 @@
         <!-- badge start -->
          <div class="badges">
             <div class="badge">
-                <img src="./img/badge1.jpg" alt="Badge">
+                <img src="./img/badge1.jpg" alt="Morning Set">
             </div>
             <div class="badge">
-                <img src="./img/badge2.jpg" alt="Badge">
+                <img src="./img/badge2.jpg" alt="HyundaiCard + STARBUCKS">
             </div>
          </div>
         <!-- badge end -->
 
     </header>
     <!-- Header End -->
+
+    <!-- Main Visual Start -->
+    <section class="visual">
+        <div class="inner">
+            <div class="title fade-in">
+                <img src="./img/visual_title.png" alt="MEET THE BUDDY'S MOMENT">
+                <a href="javascript:void(0)" class="btn">자세히 보기</a>
+            </div>
+            <div class="fade-in">
+                <img src="./img/visual_cup1.png" alt="BLACK GLAZED LATTE" class="cup1 img">
+                <img src="./img/visual_cup1_text.png" alt="블랙 글레이즈드 라떼" class="cup1 text">
+            </div>
+            <div class="fade-in">
+                <img src="./img/visual_cup2.png" alt="MARRON HAZELNUT LATTE" class="cup2 img">
+                <img src="./img/visual_cup2_text.png" alt="마롱 헤이즐넛 라떼" class="cup2 text">
+            </div>
+            <div class="fade-in">
+                <img src="./img/visual_cup3.png" alt="GOLDEN APPLE BLACK TEA" class="cup3 img">
+                <img src="./img/visual_cup3_text.png" alt="골든 애플 블랙 티" class="cup3 text">
+            </div>
+        </div>
+    </section>
+    <!-- Main Visual End -->
+
+    <!-- Notice Start -->
+    <section class="notice">
+        <!-- 공지사항 -->
+        <div class="notice-line">
+            <div class="bg-left"></div>
+            <div class="bg-right"></div>
+            <div class="inner">
+                <div class="inner__left">
+                    <h2>공지사항</h2>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><a href="javascript:void(0)">아이스 음료 11 종 가격 인상 안내</a></div>
+                            <div class="swiper-slide"><a href="javascript:void(0)">사이렌 오더/딜리버스 음료 기본 설정 변경 안내 (ICED → HOT)</a></div>
+                            <div class="swiper-slide"><a href="javascript:void(0)">스타벅스 카드 이용약관 및 홈페이지 이용약관 개정 안내</a></div>
+                            <div class="swiper-slide"><a href="javascript:void(0)">[신세계 유니버스 클럽] 멤버십 공통 혜택 변경 안내</a></div>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)" class="notice-line__more">
+                        <div class="material-icons">add_circle</div></a>
+                </div>
+                <div class="inner__right">
+                    <h2>스타벅스 프로모션</h2>
+                    <div class="toggle-promotion">
+                        <div class="material-icons">stars</div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 프로모션 -->
+        <div class="promotion">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="/img/promotion_slide1.jpg" alt="STARBUCKS RESERVE™ CHRISTMAS 스타벅스 리저브 크리스마스 커피 & 원두 기간 : 2024년 10월 25일(금) - 12월 26일(목)">
+                        <a href="javascript:void(0)"  class="btn btn--black">자세히 보기</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/promotion_slide2.jpg" alt="작은 플레이모빌 세상에서 다양한 스타벅스 버디들의 모습을 만나보세요. 기간 : 2024년 9월 27일(금) - 10월 31일(목)">
+                        <a href="javascript:void(0)" class="btn btn--black">자세히 보기</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/promotion_slide3.jpg" alt="AWAKEN TO A NEW COFFEE SENSATION 감각적인 변화, 리저브 MD 8종을 소개합니다. 기간 : 2024년 10월 24일(목) - 소진 시까지">
+                        <a href="javascript:void(0)" class="btn btn--black">자세히 보기</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/promotion_slide4.jpg" alt="MERRIER TOGETHER with starbucks 사랑하는 가족, 사랑스러운 친구들과 함께라서 더욱 즐거운 홀리데이 모먼트 기간 : 2024년 11월 1일(금) - 12월 1일(일)">
+                        <a href="javascript:void(0)" class="btn btn--black">자세히 보기</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/promotion_slide5.jpg" alt="9월 12일, 장충라운지R 특화 음료/푸드/MD 출시 스타벅스의 새로운 바웨어 컬렉션MD를 소개합니다. 기간 : 2024년 9월 12일(목) ~ 소진 시까지">
+                        <a href="javascript:void(0)" class="btn btn--black">자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next">
+                <div class="material-icons">east</div>
+            </div>
+            <div class="swiper-button-prev">
+                <div class="material-icons">west</div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <!-- Notice End -->
+
+    <!-- Rewards Start -->
+    <section class="rewards">
+        <div class="bg-left"></div>
+        <div class="bg-right"></div>
+        <div class="inner">
+            <div class="btn-group">
+                <div class="btn btn--reverse sign-in">회원가입</div>
+                <div class="btn btn--white-border log-in">로그인</div>
+                <div class="btn btn--white-border mobile-card">스타벅스 모바일 카드 선물하기</div>
+            </div>
+        </div>
+    </section>
+    <!-- Rewards End -->
+
+    <!-- Youtube Start -->
+     <section class="youtube">
+        <div class="youtube__area">
+            <div id="player"></div>
+        <div class="youtube__cover">
+            <div class="inner">
+                <img src="img/floating1.png" alt="아이콘1" class="floating floating1">
+                <img src="img/floating2.png" alt="아이콘2" class="floating floating2">
+            </div>
+        </div>    
+        </div>
+     </section>
+    <!-- Youtube End -->
+
+    <!-- Season Product Start -->
+    <section class="season-product scroll-spy">
+        <div class="inner">
+            <img src="img/floating3.png" alt="아이콘3" class="floating floating3">
+            <img src="img/season_product_image.png" alt="시즌 상품 이미지" class="product back-to-position to-right delay-0">
+            <div class="text-group">
+                <img src="img/season_product_text1.png" alt="시즌 상품 텍스트" class="title-description back-to-position to-left delay-1">
+                <div class="more back-to-position to-left delay-2">
+                    <a href="javascript:void(0)" class="btn btn--black">자세히 보기</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Season Product End -->
+
+    <!-- Reserve Coffee Start -->
+    <section class="reserve-coffee scroll-spy">
+        <div class="inner">
+            <img src="img/reserve_logo.png" alt="reserve logo" class="reserve-logo back-to-position to-right delay-0">
+            <div class="text-group">
+                <img src="img/reserve_text.png" alt="reserve text" class="description back-to-position to-right delay-1">
+                <div class="more back-to-position to-right delay-2">
+                    <a href="javascript:void(0)" class="btn btn--gold">자세히 보기</a>
+                </div>
+            </div>
+            <img src="img/reserve_image.png" alt="reserve image" class="product back-to-position to-left delay-3">
+        </div>
+    </section>
+    <!-- Reserve Coffee End -->
+
+    <!-- Pick Your Favorite Start -->
+     <section class="pick-your-favorite scroll-spy">
+        <div class="inner">
+            <div class="text-group">
+                <img src="img/favorite_text1.png" alt="favorite_text1" class="title back-to-position to-right delay-0">
+                <img src="img/favorite_text2.png" alt="favorite_text2" class="description back-to-position to-right delay-1">
+                <div class="more back-to-position to-right delay-2">
+                    <a href="javascript:void(0)" class="btn btn--white">자세히 보기</a>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- Pick Your Favorite End -->
+
+    <!-- Reserve Store Start -->
+    <section class="reserve-store">
+        <div class="inner">
+            <div class="medal">
+                <div class="front">
+                    <img src="img/reserve_store_medal_front.png" alt="front">
+                </div>
+                <div class="back">
+                    <img src="img/reserve_store_medal_back.png" alt="back">
+                    <a href="javascript:void(0)" class="btn btn--black">매장안내</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Reserve Store End -->
+
+    <!-- Find Store Start -->
+    <section class="find-store scroll-spy">
+        <div class="inner">
+            <img src="img/find_store_texture1.png" alt="find store texture1" class="texture1">
+            <img src="img/find_store_texture2.png" alt="find store texture2" class="texture2">
+            <img src="img/find_store_picture1.jpg" alt="find store picture1" class="picture picture1 back-to-position to-right delay-0">
+            <img src="img/find_store_picture2.jpg" alt="find store picture2" class="picture picture2 back-to-position to-right delay-1">
+            <div class="text-group">
+                <img src="img/find_store_text1.png" alt="find store text1" class="title back-to-position to-left delay-2">
+                <img src="img/find_store_text2.png" alt="find store text2" class="description back-to-position to-left delay-3">
+                <div class="more back-to-position to-left delay-4">
+                    <a href="javascript:void(0)" class="btn btn--black">매장 찾기</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Find Store End -->
+
+    <!-- Awards Start -->
+    <section class="awards">
+        <div class="inner">
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide"><img src="img/awards_slide1.jpg" alt="2020 대한민국 일자리대상 여성가족부장관상"></div>
+                  <div class="swiper-slide"><img src="img/awards_slide2.jpg" alt="2020 대한민국 중소중견기업혁신대상 국회산업통상자원중소벤처위원회회장상"></div>
+                  <div class="swiper-slide"><img src="img/awards_slide3.jpg" alt="2020 소방의 날 행정안전부장관 표창"></div>
+                  <div class="swiper-slide"><img src="img/awards_slide4.jpg" alt="2020 대한민국 일자리 유공 표창 대통령직속 일자리 위원회 부위원장상"></div>
+                  <div class="swiper-slide"><img src="img/awards_slide5.jpg" alt="2020 사랑나눔 사회공헌대상 동반성장위원회 위원장상"></div>
+                  <div class="swiper-slide"><img src="img/awards_slide6.jpg" alt="2020 사랑나눔 사회공헌대상 동반성장위원회 위원장상"></div>
+                  <div class="swiper-slide"><img src="img/awards_slide7.jpg" alt="소비자중심경영 CCM 인증 획득"></div>
+                </div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-next">
+                <div class="material-icons">east</div>
+            </div>
+            <div class="swiper-button-prev">
+                <div class="material-icons">west</div>
+            </div>
+        </div>
+    </section>
+    <!-- Awards End -->
+
+    <!-- Footer Start -->
+     <footer>
+        <div class="inner">
+            <ul class="menu">
+                <li><a href="javascript:void(0)" class="green">개인정보처리방침</a></li>
+                <li><a href="javascript:void(0)">영상정보처리기기 운영관리 방침</a></li>
+                <li><a href="javascript:void(0)">홈페이지 이용약관</a></li>
+                <li><a href="javascript:void(0)" class="green">위치정보 이용약관</a></li>
+                <li><a href="javascript:void(0)">스타벅스 카드 이용약관</a></li>
+                <li><a href="javascript:void(0)">윤리경영 핫라인</a></li>
+            </ul>
+            <div class="btn-group">
+                <a href="javascript:void(0)" class="btn btn--white-border">찾아오시는 길</a>
+                <a href="javascript:void(0)" class="btn btn--white-border">신규입점제의</a>
+                <a href="javascript:void(0)" class="btn btn--white-border">사이트 맵</a>
+            </div>
+            <div class="info">
+                <span>사업자등록번호 : 201-81-21515</span>
+                <span>주식회사 에스씨케이컴퍼니 대표이사 : 손정현</span>
+                <span>TEL : 1522-3232</span>
+                <span>개인정보 보호책임자 : 이찬우</span>
+            </div>
+            <p class="copyright">&copy; <span class="this-year"></span> Starbucks Coffee Company. All Rights Reserved.</p>
+            <img src="img/starbucks_logo_only_text.png" alt="STARBUCKS" class="logo">
+        </div>
+     </footer>
+    <!-- Footer End -->
 </body>
 </html>
