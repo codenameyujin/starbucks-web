@@ -28,14 +28,30 @@ window.addEventListener('scroll', _.throttle(function() {
             opacity: 0,
             display: 'none'
         })
+        // to-top button 나타나기
+        gsap.to('#to-top', 0.2, {
+            x: 0
+        })
     } else {
         // badge 나타나기
         gsap.to(badgeEl, 0.6, {
             opacity: 1,
             display: 'block'
         })
+        // to-top button 숨기기
+        gsap.to('#to-top', 0.2, {
+            x: 100
+        })
     }
 }, 300))    // _.throttle(함수, 시간)
+
+// to-top button 동작
+const toTopEl = document.querySelector('#to-top')
+toTopEl.addEventListener('click', function() {
+    gsap.to(window, 0.5, {
+        scrollTo: 0
+    })
+})
 
 // visual fade-in 효과
 const fadeEl = document.querySelectorAll('.visual .fade-in')
@@ -135,3 +151,7 @@ new Swiper('.awards .swiper', {
         prevEl: '.awards .swiper-button-prev'
     }
 })
+
+// 연도
+const thisYear = document.querySelector('.this-year')
+thisYear.textContent = new Date().getFullYear()
